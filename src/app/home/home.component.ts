@@ -3,17 +3,19 @@ import { ExemploComponent } from "../components/exemplo/exemplo.component";
 
 @Component({
   selector: 'app-home',
-  imports: [ExemploComponent],
+  imports: [],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
-export class HomeComponent implements OnDestroy, DoCheck{
+export class HomeComponent implements DoCheck{
 
-  ngOnDestroy(): void {
-      console.log("destruiu");
-  }
+  num: number = 1;
 
-  ngDoCheck(): void {
+   ngDoCheck(): void {
       console.log("uma mudanca foi feita!");
+   }
+
+  addOne(){
+    this.num++;
   }
 }
