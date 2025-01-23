@@ -12,4 +12,10 @@ import { FooterComponent } from "./components/footer/footer.component";
 })
 export class AppComponent {
   title = 'curso';
+
+  exibeHome: boolean = true;
+
+  destruir(){
+    this.exibeHome = false;
+  }
 }
