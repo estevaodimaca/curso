@@ -1,4 +1,4 @@
-import { Component, OnDestroy } from '@angular/core';
+import { Component, DoCheck, OnDestroy } from '@angular/core';
 import { ExemploComponent } from "../components/exemplo/exemplo.component";
 
 @Component({
@@ -7,9 +7,13 @@ import { ExemploComponent } from "../components/exemplo/exemplo.component";
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
-export class HomeComponent implements OnDestroy{
+export class HomeComponent implements OnDestroy, DoCheck{
 
   ngOnDestroy(): void {
       console.log("destruiu");
+  }
+
+  ngDoCheck(): void {
+      console.log("uma mudanca foi feita!");
   }
 }

@@ -1,8 +1,8 @@
 <app-navbar></app-navbar>
 
-@if (exibeHome) {
-  <app-home></app-home>
-}
+
+<app-home [hidden]="!exibeHome"></app-home>
+
 
 <button class="btn btn-primary" (click)="destruir()">Destruir</button>
 <app-footer></app-footer>
